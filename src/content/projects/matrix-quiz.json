@@ -1,0 +1,36 @@
+{
+  "slug": "matrix-quiz",
+  "title": "The Matrix Quiz",
+  "summary": "Browser-based quiz that challenges Matrix trilogy fans with instant scoring and themed feedback.",
+  "highlights": [
+    "Ten-question quiz with branching feedback",
+    "Animated progress indicators",
+    "Optimized for mobile and desktop"
+  ],
+  "links": {
+    "demo": "https://mreichba.github.io/The-Matrix-Quiz/",
+    "client": "https://github.com/mreichba/The-Matrix-Quiz",
+    "server": null
+  },
+  "cover": "/images/projects/matrix-quiz-placeholder.svg",
+  "problem": "Film fans wanted a quick way to test their Matrix knowledge without downloading an app or dealing with intrusive ads.",
+  "approach": "Designed a lightweight single-page quiz with semantic HTML, custom CSS styling, and jQuery-driven state management to handle scoring, validation, and result messaging. The experience works offline-friendly thanks to minimal assets and loads instantly on GitHub Pages.",
+  "results": [
+    "Delivers a complete quiz loop in under two minutes of play time",
+    "Maintains full keyboard navigation and aria-live scoring updates",
+    "Reusable question data structure enables easy expansion"
+  ],
+  "stack": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "jQuery",
+    "GitHub Pages"
+  ],
+  "tags": [
+    "javascript",
+    "frontend",
+    "quiz"
+  ]
+}
+

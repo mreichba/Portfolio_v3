@@ -1,0 +1,39 @@
+{
+  "slug": "french-spaced-repetition",
+  "title": "French Spaced Repetition",
+  "summary": "Adaptive flashcard trainer that helps learners retain French vocabulary through spaced repetition.",
+  "highlights": [
+    "Linked-list spaced repetition queue",
+    "JWT-secured practice sessions",
+    "Progress dashboards with streaks"
+  ],
+  "links": {
+    "demo": "https://spaced-repetition-learning-french.vercel.app/register",
+    "client": "https://github.com/mreichba/Spaced-Repitition-French-Client",
+    "server": "https://github.com/mreichba/Spaced-Repitition-French-Server"
+  },
+  "cover": "/images/projects/french-spaced-repetition-placeholder.svg",
+  "problem": "French learners needed a study aid that reinforces vocabulary at the right cadence instead of repeating random flashcards.",
+  "approach": "Modeled each vocabulary card in a PostgreSQL-backed linked list and exposed a JWT-authenticated Node/Express API that reprioritizes cards after every attempt. The React client visualizes streaks, accuracy, and upcoming cards so learners understand where to focus next.",
+  "results": [
+    "Learners cycle through 40+ vocabulary cards without repetition fatigue",
+    "API integration tests guard the spaced repetition algorithm from regressions",
+    "Deployment on Vercel keeps latency low for practice sessions"
+  ],
+  "stack": [
+    "React",
+    "JavaScript",
+    "Node",
+    "Express",
+    "PostgreSQL",
+    "JWT",
+    "Vercel"
+  ],
+  "tags": [
+    "react",
+    "node",
+    "education",
+    "spaced-repetition"
+  ]
+}
+

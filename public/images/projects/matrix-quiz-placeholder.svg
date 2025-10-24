@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The Matrix Quiz project cover placeholder</title>
+  <desc id="desc">Matrix-inspired gradient with falling code motif for the Matrix Quiz project.</desc>
+  <defs>
+    <linearGradient id="matrix-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.85" />
+    </linearGradient>
+    <pattern id="matrix-code" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 0 L0 24" stroke="rgba(34,211,238,0.35)" stroke-width="2" />
+      <circle cx="6" cy="12" r="2" fill="rgba(79,70,229,0.4)" />
+      <circle cx="18" cy="6" r="2" fill="rgba(79,70,229,0.25)" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="720" fill="#020617" />
+  <rect width="1200" height="720" fill="url(#matrix-gradient)" opacity="0.85" />
+  <rect width="1200" height="720" fill="url(#matrix-code)" opacity="0.7" />
+  <text x="60" y="140" fill="rgba(255,255,255,0.92)" font-family="Inter, system-ui, sans-serif" font-size="60" font-weight="600">
+    The Matrix Quiz
+  </text>
+  <text x="60" y="210" fill="rgba(255,255,255,0.8)" font-family="JetBrains Mono, ui-monospace, monospace" font-size="28">
+    Front-end trivia experience
+  </text>
+</svg>
+

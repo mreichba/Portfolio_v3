@@ -1,0 +1,40 @@
+{
+  "slug": "someone-like-you",
+  "title": "Someone Like You (SLY)",
+  "summary": "Data-backed quiz that compares your answers with the community to highlight unexpected similarities.",
+  "highlights": [
+    "Aggregated persona matching",
+    "Shareable results dashboard",
+    "API test suite with Mocha + Supertest"
+  ],
+  "links": {
+    "demo": "https://someone-like-you-app.vercel.app",
+    "client": "https://github.com/mreichba/SLY-Client-",
+    "server": "https://github.com/mreichba/SLY-API-"
+  },
+  "cover": "/images/projects/someone-like-you-placeholder.svg",
+  "problem": "People often feel isolated in their opinions and needed a playful way to see how their perspectives overlap with others.",
+  "approach": "Created an accessible React experience that walks users through statistically weighted questions, persists responses through a Node/Express API, and aggregates cohort data in PostgreSQL. Comprehensive integration tests verify scoring, similarity calculations, and data privacy rules.",
+  "results": [
+    "Delivers personalized insights immediately after quiz completion",
+    "Maintains anonymized response sets while reporting shared traits",
+    "Modular question framework makes adding new topics a single config change"
+  ],
+  "stack": [
+    "React",
+    "JavaScript",
+    "Node",
+    "Express",
+    "PostgreSQL",
+    "Mocha",
+    "Chai",
+    "Supertest"
+  ],
+  "tags": [
+    "react",
+    "node",
+    "analytics",
+    "fullstack"
+  ]
+}
+

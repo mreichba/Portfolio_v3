@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">French Spaced Repetition project cover placeholder</title>
+  <desc id="desc">Calming gradient with layered cards to represent a spaced repetition study flow.</desc>
+  <defs>
+    <linearGradient id="french-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#22d3ee" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" fill="#0b1020" />
+  <rect width="1200" height="720" fill="url(#french-gradient)" opacity="0.8" />
+  <g transform="translate(200,180)">
+    <rect x="0" y="0" width="320" height="200" rx="24" fill="rgba(15,23,42,0.35)" />
+    <rect x="80" y="60" width="320" height="200" rx="24" fill="rgba(247,249,252,0.2)" />
+    <rect x="160" y="120" width="320" height="200" rx="24" fill="rgba(247,249,252,0.6)" />
+  </g>
+  <text x="60" y="140" fill="rgba(255,255,255,0.95)" font-family="Inter, system-ui, sans-serif" font-size="58" font-weight="600">
+    French Spaced Repetition
+  </text>
+  <text x="60" y="210" fill="rgba(255,255,255,0.8)" font-family="Inter, system-ui, sans-serif" font-size="28">
+    Adaptive vocabulary coach
+  </text>
+</svg>
+

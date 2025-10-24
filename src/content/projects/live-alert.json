@@ -1,0 +1,39 @@
+{
+  "slug": "live-alert",
+  "title": "Live Alert",
+  "summary": "Emergency web app that broadcasts your GPS coordinates and contact details to a trusted list with one tap.",
+  "highlights": [
+    "Real-time geolocation sharing",
+    "Secure alert contact workflow",
+    "Render + Vercel deployment"
+  ],
+  "links": {
+    "demo": "https://live-alert-app.vercel.app",
+    "client": "https://github.com/mreichba/Live-Alert-Client",
+    "server": "https://github.com/mreichba/Live-Alert-Server"
+  },
+  "cover": "/images/projects/live-alert-placeholder.svg",
+  "problem": "Families needed a fast, reliable way to confirm a loved one’s location during an emergency without relying on SMS threads or social media.",
+  "approach": "Built a responsive React client with authenticated panic flows that capture the user’s live coordinates and dispatch them through a Node/Express API backed by PostgreSQL. Automated integration tests with Mocha, Chai, and Supertest keep the alert pipeline stable, and the app ships through Vercel (client) and Render (API) for quick updates.",
+  "results": [
+    "Delivered end-to-end panic alert workflow in under two weeks",
+    "Achieved sub-second alert creation thanks to lean API design",
+    "Handoff-ready documentation covering setup, testing, and deployment"
+  ],
+  "stack": [
+    "React",
+    "JavaScript",
+    "Node",
+    "Express",
+    "PostgreSQL",
+    "Vercel",
+    "Render"
+  ],
+  "tags": [
+    "react",
+    "node",
+    "postgres",
+    "fullstack"
+  ]
+}
+
