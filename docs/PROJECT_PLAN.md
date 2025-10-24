@@ -62,7 +62,6 @@ App
 **Tone**: crisp, confident, friendly.
 
 - **Color**: Muted dark on light with a deep accent.
-
   - Base: `#0B1020` (ink), `#F7F9FC` (paper)
   - Accent: `#4F46E5` (indigo) + `#22D3EE` (cyan) for micro-accents
 
@@ -92,11 +91,7 @@ All projects defined in `src/content/projects/*.json` and imported via Vite glob
   "role": "Full-stack engineer",
   "problem": "Users need a lightweight way to alert trusted contacts during emergencies.",
   "approach": "React front end with authenticated flows; Node/Express APIs; PostgreSQL; server deployed on Render; client on Vercel; alert workflow with geolocation.",
-  "results": [
-    "MVP shipped in days",
-    "Clean, testable endpoints",
-    "Deployed on modern free tiers"
-  ],
+  "results": ["MVP shipped in days", "Clean, testable endpoints", "Deployed on modern free tiers"],
   "stack": ["React", "TypeScript", "Node", "Express", "PostgreSQL"],
   "tags": ["react", "node", "postgres", "fullstack"]
 }
