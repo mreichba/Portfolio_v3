@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Live Alert project cover placeholder</title>
+  <desc id="desc">Abstract gradient background with a subtle grid for the Live Alert project.</desc>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.65" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="rgba(15,23,42,0.15)" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="1200" height="720" fill="#0b1020" />
+  <rect width="1200" height="720" fill="url(#gradient)" opacity="0.9" />
+  <rect width="1200" height="720" fill="url(#grid)" opacity="0.6" />
+  <text x="60" y="120" fill="rgba(255,255,255,0.9)" font-family="Inter, system-ui, sans-serif" font-size="54" font-weight="600">
+    Live Alert
+  </text>
+  <text x="60" y="200" fill="rgba(255,255,255,0.75)" font-family="Inter, system-ui, sans-serif" font-size="28">
+    Full-stack safety platform
+  </text>
+</svg>

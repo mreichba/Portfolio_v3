@@ -280,7 +280,7 @@ Return a diff or file list with contents.
 **Migrate content**
 
 ```
-You are the Content Agent. Import projects from my old portfolio into JSON files.
+You are the Content Agent. Import projects from my old portfolio (https://mreichba.github.io/Portfolio2/) into JSON files.
 Fields: slug, title, summary, highlights, links{demo,client,server}, cover, problem, approach, results, stack, tags.
 Write concise summaries; validate all URLs. Provide the files.
 ```

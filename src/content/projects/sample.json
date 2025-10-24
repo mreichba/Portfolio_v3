@@ -1,0 +1,22 @@
+{
+  "slug": "live-alert",
+  "title": "Live Alert",
+  "summary": "Safety app that shares GPS location with trusted contacts during emergencies.",
+  "highlights": ["React", "Node", "Express", "PostgreSQL", "Vercel", "Render"],
+  "links": {
+    "demo": "https://live-alert-app.vercel.app",
+    "client": "https://github.com/mreichba/Live-Alert-Client",
+    "server": "https://github.com/mreichba/Live-Alert-Server"
+  },
+  "cover": "/images/projects/live-alert-placeholder.svg",
+  "role": "Full-stack Engineer",
+  "problem": "Users need a lightweight way to alert trusted contacts during emergencies.",
+  "approach": "React front end with authenticated flows; Node/Express APIs; PostgreSQL persistence; deployed across Render and Vercel to keep latency low.",
+  "results": [
+    "MVP shipped in days",
+    "Clean, testable endpoints",
+    "Deployed on modern free tiers"
+  ],
+  "stack": ["React", "TypeScript", "Node", "Express", "PostgreSQL"],
+  "tags": ["react", "node", "postgres", "fullstack"]
+}
