@@ -1,4 +1,5 @@
 import { ArrowUpRight, ExternalLink, NotebookPen } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import type { Project } from '@/types/project';
@@ -18,9 +19,42 @@ interface ProjectCardProps {
   project: Project;
 }
 
+const MotionCard = motion(Card);
+const MotionBadge = motion(Badge);
+const MotionStackChip = motion.span;
+
 export function ProjectCard({ project }: ProjectCardProps) {
+  const shouldReduceMotion = useReducedMotion();
+  const easeOut = [0.16, 1, 0.3, 1] as const;
+
+  const hoverTilt = shouldReduceMotion
+    ? undefined
+    : {
+        rotateX: -2,
+        rotateY: 2,
+        translateY: -6,
+        transition: { duration: 0.18, ease: easeOut },
+      };
+
+  const tapTilt = shouldReduceMotion
+    ? undefined
+    : {
+        rotateX: 0,
+        rotateY: 0,
+        translateY: -2,
+        transition: { duration: 0.12, ease: easeOut },
+      };
+
   return (
-    <Card className="relative flex h-full flex-col border-0 bg-white/90 shadow-surface ring-1 ring-ink-900/5 transition-transform hover:-translate-y-1 hover:shadow-2xl dark:bg-ink-900/90 dark:ring-white/10">
+    <MotionCard
+      className="relative flex h-full flex-col border-0 bg-white/90 shadow-surface ring-1 ring-ink-900/5 transition-shadow hover:shadow-2xl dark:bg-ink-900/90 dark:ring-white/10"
+      style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 8 }}
+      animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      transition={shouldReduceMotion ? undefined : { duration: 0.18, ease: easeOut }}
+      whileHover={hoverTilt}
+      whileTap={tapTilt}
+    >
       {project.cover ? (
         <div className="relative mb-4 overflow-hidden rounded-2xl bg-ink-900/5">
           <img
@@ -37,10 +71,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4">
         <div className="flex flex-wrap gap-2">
-          {project.highlights.map((item) => (
-            <Badge key={item} variant="subtle">
+          {project.highlights.map((item, index) => (
+            <MotionBadge
+              key={item}
+              variant="subtle"
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 8 }}
+              animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.16,
+                ease: easeOut,
+                delay: shouldReduceMotion ? 0 : index * 0.04,
+              }}
+              whileHover={
+                shouldReduceMotion
+                  ? undefined
+                  : { scale: 1.05, transition: { duration: 0.12, ease: easeOut } }
+              }
+            >
               {item}
-            </Badge>
+            </MotionBadge>
           ))}
         </div>
         <Separator className="my-2" />
@@ -56,10 +105,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
               Stack
             </dt>
             <dd className="flex flex-wrap gap-1.5">
-              {project.stack.map((tool) => (
-                <span key={tool} className="rounded-md bg-ink-900/10 px-2 py-0.5 text-xs font-medium dark:bg-white/10">
+              {project.stack.map((tool, index) => (
+                <MotionStackChip
+                  key={tool}
+                  className="rounded-md bg-ink-900/10 px-2 py-0.5 text-xs font-medium dark:bg-white/10"
+                  initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.9 }}
+                  animate={shouldReduceMotion ? undefined : { opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.16,
+                    ease: easeOut,
+                    delay: shouldReduceMotion ? 0 : 0.1 + index * 0.03,
+                  }}
+                  whileHover={
+                    shouldReduceMotion
+                      ? undefined
+                      : { scale: 1.05, transition: { duration: 0.12, ease: easeOut } }
+                  }
+                >
                   {tool}
-                </span>
+                </MotionStackChip>
               ))}
             </dd>
           </div>
@@ -89,6 +153,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </Button>
         ) : null}
       </CardFooter>
-    </Card>
+    </MotionCard>
   );
 }

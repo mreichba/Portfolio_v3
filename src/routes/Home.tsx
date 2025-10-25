@@ -1,4 +1,5 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion, useReducedMotion } from 'framer-motion';
 import { ProjectGrid } from '@/components/projects/ProjectGrid';
 import { projects } from '@/content/projects';
 import { usePageMeta } from '@/lib/seo';
@@ -6,6 +7,9 @@ import { Button } from '@/ui/Button';
 import { Badge } from '@/ui/Badge';
 
 export default function Home() {
+  const shouldReduceMotion = useReducedMotion();
+  const easeOut = [0.16, 1, 0.3, 1] as const;
+
   usePageMeta({
     title: 'Home',
     description:
@@ -14,7 +18,12 @@ export default function Home() {
 
   return (
     <div className="space-y-24">
-      <section className="bg-subtle-radial shadow-surface relative overflow-hidden rounded-3xl px-6 py-16">
+      <motion.section
+        className="bg-subtle-radial shadow-surface relative overflow-hidden rounded-3xl px-6 py-16"
+        initial={shouldReduceMotion ? undefined : { opacity: 0, y: 16 }}
+        animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        transition={shouldReduceMotion ? undefined : { duration: 0.18, ease: easeOut }}
+      >
         <div className="relative mx-auto flex max-w-4xl flex-col gap-6 text-center">
           <Badge className="mx-auto w-fit" variant="outline">
             <Sparkles className="mr-2 size-3.5" aria-hidden />
@@ -39,7 +48,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       <section id="featured-projects" className="space-y-6">
         <div className="flex flex-col gap-2">
