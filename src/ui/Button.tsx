@@ -11,11 +11,10 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 dark:bg-indigo-500 dark:hover:bg-indigo-400',
+          'bg-sky-800 text-white shadow-sm hover:bg-sky-700 dark:bg-sky-800 dark:hover:bg-sky-700',
         secondary:
           'bg-ink-900/5 text-ink-900 hover:bg-ink-900/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/20',
-        ghost:
-          'text-ink-900 hover:bg-ink-900/10 dark:text-white dark:hover:bg-white/10',
+        ghost: 'text-ink-900 hover:bg-ink-900/10 dark:text-white dark:hover:bg-white/10',
         outline:
           'border border-ink-900/10 bg-transparent text-ink-900 hover:bg-ink-900/5 dark:border-white/15 dark:text-white dark:hover:bg-white/10',
       },
@@ -44,15 +43,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : 'button';
 
     return (
-      <Comp
-        className={cn(buttonVariants({ variant, size }), className)}
-        ref={ref}
-        {...props}
-      />
+      <Comp className={cn(buttonVariants({ variant, size }), className)} ref={ref} {...props} />
     );
   },
 );
 Button.displayName = 'Button';
 
 export const buttonStyles = buttonVariants;
-

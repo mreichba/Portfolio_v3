@@ -40,16 +40,26 @@ export function Header() {
   }, [isMobileOpen]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-900/5 bg-paper/80 backdrop-blur-md dark:border-white/10 dark:bg-ink-900/80">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50 isolate overflow-hidden border-b border-white/30 bg-gradient-to-b from-white/85 via-white/55 to-white/15 backdrop-blur-2xl transition dark:border-white/10 dark:from-ink-900/95 dark:via-ink-900/75 dark:to-ink-900/35">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10 opacity-80 mix-blend-screen dark:opacity-70 bg-aurora-flares"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-px -z-10 bg-gradient-to-r from-indigo-400/50 via-transparent to-cyan-300/50 dark:from-indigo-300/60 dark:to-cyan-200/60"
+        aria-hidden
+      />
+      <div className="container flex h-20 items-center justify-between">
         <NavLink
           to="/"
-          className="flex items-center gap-2 text-base font-semibold tracking-tight transition-colors hover:text-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+          className="group flex items-center gap-3 text-base font-semibold tracking-tight transition-colors hover:text-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
         >
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-indigo-500/10 text-indigo-500 dark:bg-indigo-500/20 dark:text-indigo-200">
+          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-500/20 via-cyan-400/20 to-transparent text-indigo-600 shadow-inner shadow-[inset_0_0_30px_rgba(79,70,229,0.25)] dark:from-indigo-400/30 dark:via-cyan-300/30 dark:text-indigo-200">
             MR
           </span>
-          <span>Mason Reichbauer</span>
+          <span className="bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-cyan-400 bg-clip-text text-transparent transition group-hover:opacity-90 dark:from-indigo-300 dark:via-fuchsia-300 dark:to-cyan-200">
+            Mason Reichbauer
+          </span>
         </NavLink>
 
         <nav aria-label="Main navigation" className="hidden items-center gap-1 md:flex">
@@ -59,10 +69,10 @@ export function Header() {
               to={item.to}
               className={({ isActive }) =>
                 cn(
-                  'rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:text-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400',
+                  'rounded-xl px-3 py-2 text-sm font-medium transition-colors hover:bg-white/50 hover:text-indigo-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 dark:hover:bg-white/10',
                   isActive
-                    ? 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-200'
-                    : 'text-ink-900/70 dark:text-white/70',
+                    ? 'bg-gradient-to-r from-indigo-500/25 via-cyan-400/20 to-transparent text-indigo-600 shadow-[0_20px_50px_-30px_rgba(59,130,246,0.75)] dark:from-indigo-400/30 dark:via-cyan-300/25 dark:to-transparent dark:text-indigo-200'
+                    : 'text-ink-900/75 dark:text-white/70',
                 )
               }
             >
@@ -138,7 +148,7 @@ export function Header() {
                   }
             }
           >
-            <div className="container border-t border-ink-900/10 py-3 dark:border-white/10">
+            <div className="container border-t border-white/40 bg-white/70 py-4 backdrop-blur-xl dark:border-white/10 dark:bg-ink-900/70">
               <ul className="flex flex-col gap-1">
                 {NAV_ITEMS.map((item) => (
                   <li key={item.to}>
@@ -146,10 +156,10 @@ export function Header() {
                       to={item.to}
                       className={({ isActive }) =>
                         cn(
-                          'block rounded-lg px-3 py-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400',
+                          'block rounded-xl px-3 py-2 text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400',
                           isActive
-                            ? 'bg-indigo-500/10 text-indigo-600 dark:bg-indigo-500/20 dark:text-indigo-200'
-                            : 'text-ink-900/80 hover:bg-ink-900/5 dark:text-white/80 dark:hover:bg-white/10',
+                            ? 'bg-gradient-to-r from-indigo-500/30 via-cyan-400/20 to-transparent text-indigo-600 shadow-[0_20px_50px_-30px_rgba(59,130,246,0.65)] dark:from-indigo-400/35 dark:via-cyan-300/25 dark:to-transparent dark:text-indigo-200'
+                            : 'text-ink-900/80 hover:bg-indigo-500/5 dark:text-white/80 dark:hover:bg-white/10',
                         )
                       }
                     >
