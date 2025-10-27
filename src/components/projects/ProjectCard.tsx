@@ -52,7 +52,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <MotionCard
-      className="group relative flex h-full cursor-pointer flex-col overflow-hidden border border-white/50 bg-aurora-card text-left shadow-[0_45px_95px_-55px_rgba(15,23,42,0.55)] transition-shadow hover:shadow-[0_40px_95px_-35px_rgba(79,70,229,0.5)] dark:border-white/10 dark:bg-aurora-card-dark"
+      className="group relative flex h-full min-h-[70vh] cursor-pointer flex-col overflow-hidden border border-white/50 bg-aurora-card text-left shadow-[0_45px_95px_-55px_rgba(15,23,42,0.55)] transition-transform transition-shadow duration-200 hover:scale-[1.06] hover:shadow-[0_50px_120px_-60px_rgba(79,70,229,0.6)] dark:border-white/10 dark:bg-aurora-card-dark lg:min-h-[80vh]"
       style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
       initial={shouldReduceMotion ? undefined : { opacity: 0, y: 8 }}
       animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
@@ -74,11 +74,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         aria-hidden
       />
       {project.cover ? (
-        <div className="relative mb-5 overflow-hidden rounded-3xl border border-white/40 bg-white/40 backdrop-blur-sm dark:border-white/10 dark:bg-white/5">
+        <div className="relative mb-12 overflow-hidden rounded-3xl border border-white/40 bg-gradient-to-br from-white/70 to-white/40 backdrop-blur-sm dark:border-white/10 dark:from-white/10 dark:to-white/5">
           <img
             src={project.cover}
             alt={`${project.title} cover`}
-            className="h-48 w-full object-cover"
+            className="h-80 w-full rounded-2xl object-cover sm:h-[24rem]"
             loading="lazy"
           />
         </div>

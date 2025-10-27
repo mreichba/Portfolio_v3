@@ -10,29 +10,29 @@ interface PageShellProps {
 export function PageShell({ children }: PageShellProps) {
   return (
     <div className="relative flex min-h-screen flex-col overflow-x-hidden text-ink-900 transition-colors dark:text-white">
-      <div className="pointer-events-none absolute inset-0 -z-30 bg-aurora-light dark:bg-aurora-dark" aria-hidden />
-      <div className="pointer-events-none absolute inset-0 -z-20 opacity-80 mix-blend-screen dark:opacity-70 dark:mix-blend-lighten bg-aurora-ribbons" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 -z-30 bg-aurora-light dark:bg-gradient-to-br dark:from-slate-950 dark:via-indigo-950/80 dark:to-slate-900" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 -z-20 opacity-60 mix-blend-screen dark:opacity-35 bg-aurora-ribbons" aria-hidden />
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-70 mix-blend-soft-light dark:opacity-60"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-48 mix-blend-overlay dark:opacity-45"
         style={{
           backgroundImage:
-            'radial-gradient(600px circle at 12% 18%, rgba(99,102,241,0.22), transparent 55%), radial-gradient(520px circle at 85% 10%, rgba(56,189,248,0.18), transparent 52%), radial-gradient(640px circle at 48% 82%, rgba(14,165,233,0.15), transparent 60%)',
+            'radial-gradient(520px circle at 12% 18%, rgba(99,102,241,0.14), transparent 62%), radial-gradient(480px circle at 82% 14%, rgba(56,189,248,0.12), transparent 64%), radial-gradient(620px circle at 52% 82%, rgba(45,212,191,0.1), transparent 68%)',
         }}
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 -z-[5] opacity-60 mix-blend-screen dark:mix-blend-screen"
+        className="pointer-events-none absolute inset-0 -z-[5] opacity-20 dark:opacity-28"
         style={{
           backgroundImage:
-            'radial-gradient(35% 45% at 12% 88%, rgba(236,72,153,0.24), transparent), radial-gradient(45% 45% at 88% 78%, rgba(56,189,248,0.18), transparent)',
+            'radial-gradient(38% 46% at 15% 85%, rgba(236,72,153,0.14), transparent), radial-gradient(48% 48% at 82% 78%, rgba(59,130,246,0.12), transparent)',
         }}
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.18]"
+        className="pointer-events-none absolute inset-0 -z-[5] opacity-[0.08] dark:opacity-[0.12]"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px)',
+            'linear-gradient(rgba(15,23,42,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(15,23,42,0.06) 1px, transparent 1px)',
           backgroundSize: '120px 120px',
         }}
         aria-hidden
